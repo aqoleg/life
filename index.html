@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+    <head>
+        <title>Life</title>
+        <meta charset="utf-8" />
+        <meta name="author" content="aqoleg" />
+        <meta name="description" content="The game of life, cellular automaton" />
+        <meta name="keywords" content="aqoleg, life, game, cellular, automaton" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="theme-color" content="green" />
+        <link rel="icon" href="assets/icon.png" />
+        <link rel="stylesheet" href="assets/style.css" />
+    </head>
+    <body>
+        <div id="main">
+            <div class="header">
+                <h1>Game of Life</h1>
+            </div>
+            <div class="column1">
+                <div>
+                    <p>One instance of a cellular automaton with certain rules:</p>
+                    <ul>
+                        <li>2-dimensional space of cells. In this instance opposite edges are contiguous. So it represents torus surface.</li>
+                        <li>Cells have two states - dead and alive (green).</li>
+                        <li>Each cell has 8 neighbours - Moore neighborhood.</li>
+                        <li>On the next step any cell with 3 neighbours and any alive cell with 2 neighbours will be alive, every other cell will be dead. Rule B3/S23.</li>
+                    </ul>
+                    <p><span id="start" onclick="Life.start()">Start</span> your game or select known pattern.</p>
+                </div>
+            </div>
+            <div class="column2">
+                <div class="row">
+                    <p><img src="assets/glider.svg" alt="Glider" onclick="Life.startWith('glider')" width="128" height="128" />Glider, smallest spaceship. It travels diagonally at speed one forth from light speed.</p>
+                </div>
+                <div class="row">
+                    <p><img src="assets/rpentomino.svg" alt="R-pentomino" onclick="Life.startWith('rpentomino')" width="128" height="128" />R-pentomino, smallest pattern with a large number of generations.</p>
+                </div>
+                <div class="row">
+                    <p><img src="assets/acorn.svg" alt="Acorn" onclick="Life.startWith('acorn')" width="256" height="128" />Acorn, long-living being.</p>
+                </div>
+                <div class="row">
+                    <p><img src="assets/switch.svg" alt="Switch engine"  onclick="Life.startWith('switch')" width="224" height="160" />Switch engine.</p>
+                </div>
+                <div class="row">
+                    <p><img src="assets/multum.svg" alt="Multum in parvo" onclick="Life.startWith('multum')" width="224" height="160" />Multum in parvo.</p>
+                </div>
+                <div class="row">
+                    <p><img src="assets/rabbits.svg" alt="Rabbits" onclick="Life.startWith('rabbits')" width="256" height="128" />Rabbits.</p>
+                </div>
+                <div class="row">
+                    <p><img src="assets/queenbee.svg" alt="Queen bee" onclick="Life.startWith('queenbee')" width="256" height="192" />Queen bee.</p>
+                </div>
+                <div class="row">
+                    <p><img src="assets/7468m.svg" alt="7468M" onclick="Life.startWith('7468m')" width="224" height="160" />7468M.</p>
+                </div>
+                <div class="row">
+                    <p><img src="assets/23334m.svg" alt="23334M" onclick="Life.startWith('23334m')" width="192" height="288" />23334M.</p>
+                </div>
+            </div>
+        </div>
+        <div id="game" onclick="Life.onClick(event)">
+            <div id="field"></div>
+            <div id="counter">0</div>
+            <div class="button" id="playPause"></div>
+            <div class="button" id="stop"></div>
+            <div class="button" id="increaseSpeed"></div>
+            <div class="button" id="decreaseSpeed"></div>
+            <div class="button" id="increaseCell"></div>
+            <div class="button" id="decreaseCell"></div>
+            <div class="button" id="back"></div>
+        </div>
+        <script src="assets/script.js"></script>
+    </body>
+</html>

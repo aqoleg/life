@@ -1,0 +1,146 @@
+html, body {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+.header {
+    height: 64px;
+    background: green;
+}
+a {
+    outline: 0;
+}
+h1 {
+    line-height: 64px;
+    margin: 0px;
+    text-align: center;
+    color: white;
+}
+.column1 {
+    float: left;
+    width: 100%;
+}
+.column1 div {
+    margin: 16px;
+    line-height: 1.5em;
+}
+#start {
+    color: green;
+    cursor: pointer;
+}
+.column2 {
+    float: left;
+    width: 100%;
+}
+.row {
+    border-top: 2px solid green;
+}
+.row p {
+    margin: 16px;
+    line-height: 1.5em;
+}
+.row img {
+    cursor: pointer;
+}
+
+#start:hover {
+    text-shadow: 0px 0px 8px green;
+}
+.row img:hover {
+    transform: scale(1.02, 1.02);
+}
+
+@media screen and (max-width: 479px) {
+    .row img {
+        display: block;
+        margin: 0px auto 16px auto;
+    }
+}
+@media screen and (min-width: 480px) {
+    .row img {
+        float: left;
+        margin-right: 16px;
+    }
+    .row p {
+        content: "";
+        clear: both;
+        display: table;
+    }
+}
+@media screen and (min-width: 800px) {
+    .column1 {
+        width: 40%;
+    }
+    .column2 {
+        width: 60%;
+        margin-top: -2px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .column1 div {
+        margin: 32px;
+    }
+    .row p {
+        margin: 32px;
+    }
+    .row img {
+        margin-right: 32px;
+    }
+}
+
+#game {
+    display: none;
+}
+#field {
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+}
+.cell {
+    float: left;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+}
+#counter {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    font-family: monospace;
+    font-size: 2em;
+}
+.button {
+    position: fixed;
+    background-size: cover;
+    cursor: pointer;
+}
+#playPause {
+    background-image: url(play.svg);
+}
+#stop {
+    background-image: url(stop.svg);
+}
+#increaseSpeed {
+    background-image: url(increaseSpeed.svg);
+}
+#decreaseSpeed {
+    background-image: url(decreaseSpeed.svg);
+}
+#increaseCell {
+    background-image: url(increaseCell.svg);
+}
+#decreaseCell {
+    background-image: url(decreaseCell.svg);
+}
+#back {
+    background-image: url(back.svg);
+}
+
+.cell:hover {
+    background-color: #60BF60 !important;
+}
+.button:hover {
+    transform: scale(1.1, 1.1);
+}
+.button:active {
+    opacity: 0.4;
+}

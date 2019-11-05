@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" baseProfile="full" viewBox="0 0 128 128" preserveAspectRatio="xMidYMid meet">
+    <path d="M 16,16 h 32 v 64 h 64 v -32 h -32 v 64 h -64 Z" fill="green" />
+</svg>
